@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo Detección de COVID</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Modelo de detección de COVID</h1>
+    </header>
+    <main>
+        <label for="imageUpload">Seleccionar imagen</label>
+        <input type="file" id="imageUpload" accept="image/*" onchange="handleFileSelect(event)">
+        <div id="dropzone" ondrop="handleDrop(event)" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
+            Arrastra y suelta una imagen aquí o haz click para seleccionar
+        </div>
+        <div class="image-result">
+            <div id="imageContainer"></div>
+            <div id="result"></div>
+        </div>
+        
+    </main>
+</body>
+</html>
